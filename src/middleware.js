@@ -4,7 +4,10 @@ import { cookies } from "next/headers";
 export function middleware(req) {
     let isAuthenticated = false;
 
-    if (cookies().has("guest") || cookies().has("next-auth.session-token")) {
+    if (
+        cookies().has("guest") ||
+        cookies().has("__Secure-next-auth.session-token")
+    ) {
         isAuthenticated = true;
     }
     if (!isAuthenticated) {
