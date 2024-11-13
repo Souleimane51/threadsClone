@@ -6,7 +6,7 @@ export function middleware(req) {
 
     if (
         cookies().has("guest") ||
-        cookies().has("__Secure-next-auth.session-token")
+        cookies().has("__Secure-next-auth.session-token.1")
     ) {
         isAuthenticated = true;
     }
